@@ -1,0 +1,70 @@
+@import "mixins"
+
+.header
+    display: flex
+    justify-content: center
+    z-index: 5
+
+    &__body
+        display: flex
+        justify-content: center
+        align-items: center
+        border-bottom: 1px solid #D8E3FE
+
+.fixed-header
+    position: fixed
+    top: 0
+    left: 0
+    @include size(100%, 80px)
+
+.navmenu
+    @include size (100%,80px)
+
+    &__body
+        display: flex
+        height: 100%
+        justify-content: space-between
+
+    &__block
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__list
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        height: 100%
+
+        li
+            display: flex
+            align-items: center
+
+            transition: all 0.2s ease 0s
+
+            &:hover
+                background: #dddada62
+
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 0px 20px 0px 20px
+
+                color: #697CA6
+                @include size(100%, 100%)
+
+                &:hover
+                    color: #565d76
+
+.logo
+    z-index: 10
+    display: block
+    @include adaptive-property ('width', 30, 25)
+    @include adaptive-property ('height', 30, 25)
+    @include adaptive-property ('margin-right',33,20)
+    min-width: 30px
+
+    img
+        @include size (100%,100%)
+        border-radius: 50%

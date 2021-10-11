@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('_head.html', {
+"title": "Clean And Simple"
+})
+
+<body>
+    @@include('_header.html')
+
+    <main class="main">
+        <div class="main__body">
+            <section class="fullscreen">
+                <div class="fullscreen__body container">
+                </div>
+                <button data-modal-link="video" type='button'>play</button>
+            </section>
+            <section class='content'>
+                <div class="content__body">
+                    <!-- Swiper construction 
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                            </div>
+                            <div class="swiper-slide">
+                            </div>
+                        </div>
+                    </div>
+                    -->
+            </section>
+        </div>
+    </main>
+
+    @@include('_footer.html')
+
+    <section id="video" class='modal-window'>
+        <div class="modal-window__body">
+            <div class="modal-window__content">
+                <button type='button' class="modal-closer">close me</button>
+                <video poster="video/previewVideo.png" controls>
+                    <source src="video/main-video.webm" type="video/webm">
+                    <source src="video/main-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+</body>
+@@include('_scripts.html')
+
+</html>

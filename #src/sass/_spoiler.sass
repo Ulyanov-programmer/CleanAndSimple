@@ -4,38 +4,46 @@
     align-items: center
     position: relative
 
-    padding: 15px 0px 15px 0px
+    padding: 15px 0px 25px 0px
     transition: all 0.5s ease
     cursor: pointer !important
 
-    @media (max-width: 426px)
-        flex-flow: column nowrap
-
     &.active
-        color: #fd6767
+        color: #495274
 
-        &:after
-            margin: 3px 0px 0px 7px
-            transform: rotate(-45deg)
+        &:before
+            margin: 0px 20px 0px 0px
+            animation: spoiler-arrow-totop 0.5s
+            animation-fill-mode: forwards
 
-    &:after
+    &:before
         display: inline-block
-        margin: 0px 0px 0px 7px
+        content: ""
+
+        margin: 0px 20px 0px 0px
         padding: 5px 5px 5px 5px
         @include size (10px,10px)
 
-        border-top: 2px solid #000
-        border-right: 2px solid #000
-        transform: rotate(135deg)
+        border-top: 3px solid #8E96B7
+        border-right: 3px solid #8E96B7
+        border-radius: 2px
+        animation: spoiler-arrow-tobottom 0.5s
+        animation-fill-mode: forwards
 
         transition: all 0.2s ease
-        content: url("")
-
-        @media (max-width: 426px)
-            transform: rotate(135deg)
 
 .spoiler-content
 
-    li
-        padding: 5px 0px 5px 0px
     &.active
+
+@keyframes spoiler-arrow-totop
+    0%
+        transform: rotate(135deg) translate(0%, 50%)
+    100%
+        transform: rotate(-45deg) translate(-50%, 0%)
+
+@keyframes spoiler-arrow-tobottom
+    0%
+        transform: rotate(-45deg) translate(-50%, 0%)
+    100%
+        transform: rotate(-225deg) translate(0%, 50%)

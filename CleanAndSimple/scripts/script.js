@@ -110,17 +110,11 @@ let spoilerContentElements = doc.querySelectorAll('[data-spoiler-content]');
 function toggleToSpoilers(e) {
     if (spoilerContentElements.length > 0 &&
         spoilerButtons.length == spoilerContentElements.length) {
+        
         for (let i = 0; i < spoilerContentElements.length; i++) {
-
-            if (window.innerWidth <= 900) {
-                spoilerContentElements[i].classList.add('spoiler-content');
-                spoilerContentElements[i].hidden = true;
-                spoilerButtons[i].classList.add('spoiler-button');
-            } else {
-                spoilerContentElements[i].classList.remove('spoiler-content');
-                spoilerContentElements[i].hidden = false;
-                spoilerButtons[i].classList.remove('spoiler-button');
-            }
+            spoilerContentElements[i].classList.add('spoiler-content');
+            spoilerContentElements[i].hidden = true;
+            spoilerButtons[i].classList.add('spoiler-button');
         }
 
         for (let spoilerButton of spoilerButtons) {

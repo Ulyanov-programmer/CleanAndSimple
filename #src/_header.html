@@ -1,13 +1,12 @@
 <header class="header fixed-header">
     <div class="header__body head-foot-container">
-        <a href="#" class="logo">
-            <img src="img/logo.png" alt="logo">
-        </a>
-
-        <nav class="navmenu">
-            <div class="navmenu__body">
-                <div class="navmenu__block">
+        <div class="nav-wrapper">
+            <nav class="navmenu">
+                <div class="navmenu__body left-navmenu">
                     <ul class='navmenu__list'>
+                        <a href="#" class="logo">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
                         <li>
                             <a target="_blank" rel="noopener noreferrer" href="#">Home</a>
                         </li>
@@ -17,15 +16,17 @@
                         <li>
                             <a target="_blank" rel="noopener noreferrer" href="#">Features</a>
                         </li>
-                        <li>
+                        <li class="mobile-hidden">
                             <a target="_blank" rel="noopener noreferrer" href="#">Pricing</a>
                         </li>
-                        <li>
+                        <li class="mobile-hidden">
                             <a target="_blank" rel="noopener noreferrer" href="#">Documentation</a>
                         </li>
                     </ul>
                 </div>
-                <div class="navmenu__block">
+            </nav>
+            <nav class="navmenu mobile-hidden">
+                <div class="navmenu__body right-navmenu">
                     <ul class="socials">
                         <li class="socials__item">
                             <a target="_blank" rel="noopener noreferrer" href="#">
@@ -50,6 +51,20 @@
                     </ul>
                     <a class="get-started-btn" target="_blank" rel="noopener noreferrer" href="#">Get started</a>
                 </div>
+            </nav>
+            <button type="menu" id="burgerButton" class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="fullscreen-navmenu">
+            <div class="fullscreen-navmenu__body">
+                <ul>
+                    <li>кнопка</li>
+                    <li>кнопка</li>
+                    <li>кнопка</li>
+                </ul>
             </div>
         </nav>
     </div>

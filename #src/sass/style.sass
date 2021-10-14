@@ -280,8 +280,8 @@ body
     &__body
         text-align: center
         color: #fff
-        @include adaptive-property ('padding-top',50,20)
-        @include adaptive-property ('padding-bottom',50,20)
+        @include adaptive-property ('padding-top',50,30)
+        @include adaptive-property ('padding-bottom',60,40)
 
     &__main-content
         *
@@ -327,11 +327,25 @@ body
         top: 50%
         transform: translate(0, -50%)
 
+        @media (max-width: 426px)
+            @include size (200px,200px)
+
+            img
+                @include size (100%,100%)
+                object-fit: contain
+
     &__clouds-right
         position: absolute
         right: 0
         top: 70%
         transform: translate(0, -50%)
+
+        @media (max-width: 426px)
+            @include size (100px,100px)
+
+            img
+                @include size (100%,100%)
+                object-fit: contain
 
 .newsletter
 
@@ -424,6 +438,8 @@ body
 
 .container
     margin: auto
+    padding-right: 15px
+    padding-left: 15px
 
     @media (min-width: 768px)
         width: 55%
@@ -435,7 +451,7 @@ body
         width: 95%
 
 .big-container
-    margin: auto
+    @extend .container
 
     @media (min-width: 768px)
         width: 70%
@@ -510,7 +526,10 @@ body
     &__item
         a
             display: inline-block
-            padding: 15px 15px 15px 15px
+            @include adaptive-property ('padding-top',15,12)
+            @include adaptive-property ('padding-left',15,12)
+            @include adaptive-property ('padding-right',15,12)
+            @include adaptive-property ('padding-bottom',15,12)
 
             &:hover
                 color: #565d76
@@ -522,10 +541,10 @@ body
 
         &:first-child
             a
-                padding-left: 25px
+                padding-left: 35px
         &:last-child
             a
-                padding-right: 25px
+                padding-right: 35px
 
 .get-started-btn
     color: #3A79FF

@@ -4,7 +4,7 @@ let spoilerContentElements = doc.querySelectorAll('[data-spoiler-content]');
 function toggleToSpoilers(e) {
     if (spoilerContentElements.length > 0 &&
         spoilerButtons.length == spoilerContentElements.length) {
-        
+
         for (let i = 0; i < spoilerContentElements.length; i++) {
             spoilerContentElements[i].classList.add('spoiler-content');
             spoilerContentElements[i].hidden = true;
@@ -22,9 +22,11 @@ function toggleSpoilerState(event) {
     let spoilerContainer = targetSpoilerButton.nextElementSibling;
     let animationDuration = 500;
 
-    toggleSpoilerAnimation(spoilerContainer, animationDuration);
-    targetSpoilerButton.classList.toggle('active');
-    spoilerContainer.classList.toggle('active');
+    if (spoilerContainer.classList.contains('_slide') === false) {
+        toggleSpoilerAnimation(spoilerContainer, animationDuration);
+        targetSpoilerButton.classList.toggle('active');
+        spoilerContainer.classList.toggle('active');
+    }
 }
 
 // Determines spoilers when the page is loaded and when it is resized.
@@ -35,7 +37,7 @@ function spoilerUp(spoilerContainer, duration) {
     if (spoilerContainer.classList.contains('_slide') === false) {
         spoilerContainer.classList.add('_slide');
         let containerStyle = spoilerContainer.style;
-        
+
         containerStyle.transitionProperty = 'height, margin, padding';
         containerStyle.transitionDuration = duration + 'ms';
         containerStyle.height = spoilerContainer.clientHeight + 'px';

@@ -60,6 +60,18 @@ body
             background: #fff
             color: #000
 
+.adaptive-image
+    display: block
+    position: relative
+    padding: 0px 0px 100% 0px
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        @include size (100%,100%)
+        object-fit: cover
+
 .fullscreen
     // ? I recommend save this if you use sidepanel in fullscreen.
     position: relative
@@ -78,6 +90,84 @@ body
 .content
 
     &__body
+
+.customers-quotes
+    position: relative
+    background: #EAF0FF
+
+    &__body
+        @include adaptive-property ('padding-top',50,30)
+        @include adaptive-property ('padding-bottom',60,40)
+
+    &__info
+        display: inline-block
+        width: 50%
+
+    &__subtitle
+        padding: 0px 0px 40px 0px
+
+    &__title
+        padding: 0px 0px 30px 0px
+
+    &__text
+        line-height: 1.9
+
+    &__slides
+        display: inline-block
+        width: 50%
+        position: absolute
+
+    &__slider
+
+    &__pagination
+        bottom: 15% !important
+        width: 530px !important
+
+    &-slide
+        padding: 0px 0px 150px 0px
+        opacity: 45%
+        transition: all 0.2s ease
+
+        &__body
+            position: relative
+            padding: 40px 70px 40px 70px
+            min-width: 470px
+            margin: 0px 30px 0px 30px
+            background: #fff
+
+        &__text
+            font-family: Roboto
+            color: #676F95
+            line-height: 1.7
+
+        &__image
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, 50%)
+            transition: all 0.2s ease
+
+            @include size (60px,60px)
+            padding: 0px 0px 60px 0px
+
+            visibility: hidden
+            opacity: 0
+            pointer-events: none
+
+            img
+                object-fit: contain
+
+        &.swiper-slide-active
+            transition: all 0.2s ease
+            opacity: 100%
+
+            .customers-quotes-slide__image
+                visibility: visible
+                opacity: 1
+                pointer-events: all
+
+            .customers-quotes-slide__body
+                box-shadow: 0 5px 30px rgba(0,0,0,0.2)
 
 .questions-answers
 
@@ -486,18 +576,6 @@ body
         justify-content: center
         align-items: center
 
-.adaptive-image
-    display: block
-    position: relative
-    padding: 0px 0px 100% 0px
-
-    img
-        position: absolute
-        top: 0
-        left: 0
-        @include size (100%,100%)
-        object-fit: cover
-
 .fs-block
     min-height: 100vh
     height: auto
@@ -511,6 +589,7 @@ body
     display: inline-block
     text-transform: uppercase
     font-family: Roboto med
+    color: #3D4F9F
     @include adaptive-property ('font-size',13, 12)
 
 .main-title

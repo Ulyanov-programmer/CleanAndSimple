@@ -60,22 +60,20 @@
         },
 
         // Changes the slider settings based on the width of the screen.
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     320: {
-        //         slidesPerView: 2,
-        //         spaceBetween: 20
-        //     },
-        // },
+        breakpoints: {
+            // when window width is >= 320px
+            1270: {
+                slidesPerView: 1.5,
+                spaceBetween: 70,
+            },
+        },
 
 
         // Changes the height of the slider in runtime depending on the height of the slides.
         autoHeight: true,
-        slidesPerView: 1.5,
         watchOverflow: true,
 
         // Indent between slides.
-        spaceBetween: 70,
 
         // Enable parallax effect. For working add attributes:
         // data-swiper-parallax="0" (xRight)

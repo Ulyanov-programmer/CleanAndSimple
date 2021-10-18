@@ -56,7 +56,7 @@ body
             background: #fff
             color: #000
 
-        @media (max-width: 426px)
+        @media (max-width: 768px)
             background: #fff
             color: #000
 
@@ -71,6 +71,29 @@ body
         left: 0
         @include size (100%,100%)
         object-fit: cover
+
+.fs-block
+    min-height: 100vh
+    height: auto
+
+.title
+    color: #3D4F9F
+    font-family: Quicksand med
+    @include adaptive-property ('font-size',24, 18)
+
+.subtitle
+    display: inline-block
+    text-transform: uppercase
+    font-family: Roboto med
+    color: #3D4F9F
+    @include adaptive-property ('font-size',13, 12)
+
+.main-title
+    font-family: Quicksand light
+    @include adaptive-property ('font-size',48, 32)
+
+.second-main-title
+    @include adaptive-property ('font-size',36, 24)
 
 .fullscreen
     // ? I recommend save this if you use sidepanel in fullscreen.
@@ -97,43 +120,62 @@ body
 
     &__body
         @include adaptive-property ('padding-top',50,30)
-        @include adaptive-property ('padding-bottom',60,40)
+        @include adaptive-property ('padding-bottom',50,30)
 
     &__info
         display: inline-block
         width: 50%
 
+        @media (max-width: 1270px)
+            display: block
+            text-align: center
+            width: 100%
+
     &__subtitle
         padding: 0px 0px 40px 0px
 
     &__title
-        padding: 0px 0px 30px 0px
+        padding: 0px 0px 25px 0px
 
     &__text
+        width: 70%
         line-height: 1.9
+
+        @media (max-width: 1270px)
+            width: 100%
+            margin: 0px 0px 30px 0px
 
     &__slides
         display: inline-block
         width: 50%
         position: absolute
 
+        @media (max-width: 1270px)
+            width: 100%
+            position: static
+
     &__slider
 
     &__pagination
         bottom: 15% !important
-        width: 530px !important
+        width: 64% !important
+
+        @media (max-width: 1270px)
+            width: 100% !important
 
     &-slide
         padding: 0px 0px 150px 0px
         opacity: 45%
-        transition: all 0.2s ease
 
         &__body
             position: relative
             padding: 40px 70px 40px 70px
-            min-width: 470px
             margin: 0px 30px 0px 30px
             background: #fff
+
+            @media (max-width: 768px)
+                min-width: auto
+                padding: 20px 45px 40px 45px
 
         &__text
             font-family: Roboto
@@ -145,7 +187,7 @@ body
             bottom: 0
             left: 50%
             transform: translate(-50%, 50%)
-            transition: all 0.2s ease
+            transition: all 0.5s ease
 
             @include size (60px,60px)
             padding: 0px 0px 60px 0px
@@ -158,7 +200,7 @@ body
                 object-fit: contain
 
         &.swiper-slide-active
-            transition: all 0.2s ease
+            transition: all 0.5s ease
             opacity: 100%
 
             .customers-quotes-slide__image
@@ -189,7 +231,13 @@ body
         text-align: left
 
     &__sp-button
+        display: flex
+        width: 100%
+        justify-content: flex-start
         color: #8E96B7
+
+        &:hover
+            color: #495274
 
         &:after
             content: '?'
@@ -273,15 +321,6 @@ body
 
     &__refs-block
 
-    &__video-btn
-        &:after
-            content: url('../img/icons/playArrow-white.svg')
-
-        @media (max-width: 768px)
-            background: #4C85FF
-            border-color: #4C85FF
-            color: #fff
-
     &__ref
         color: #ADB4D2
         border-color: #D1D1E4
@@ -298,9 +337,19 @@ body
 
         @media (max-width: 1270px)
             background: #f5f8ff
+
         @media (max-width: 768px)
-            background: #6f9af7
+            background: #4C85FF
             border-color: #6f9af7
+            color: #fff
+
+    &__video-btn
+        &:after
+            content: url('../img/icons/playArrow-white.svg')
+
+        @media (max-width: 768px)
+            background: #4C85FF
+            border-color: #4C85FF
             color: #fff
 
     &__image
@@ -384,6 +433,7 @@ body
             font-family: Quicksand med
 
     &__subtitle
+        color: #fff
         margin: 0px 0px 50px 0px
 
     &__text
@@ -398,6 +448,10 @@ body
         border-right: none
         padding: 13px 10px 13px 10px
         transition: all 0.2s ease
+
+        @media (max-width: 768px)
+            &:first-child
+                border-right: 1px solid #000
 
         &:last-child
             border-right: 1px solid #fff
@@ -575,29 +629,6 @@ body
         height: 100%
         justify-content: center
         align-items: center
-
-.fs-block
-    min-height: 100vh
-    height: auto
-
-.title
-    color: #3D4F9F
-    font-family: Quicksand med
-    @include adaptive-property ('font-size',24, 18)
-
-.subtitle
-    display: inline-block
-    text-transform: uppercase
-    font-family: Roboto med
-    color: #3D4F9F
-    @include adaptive-property ('font-size',13, 12)
-
-.main-title
-    font-family: Quicksand light
-    @include adaptive-property ('font-size',48, 32)
-
-.second-main-title
-    @include adaptive-property ('font-size',36, 24)
 
 .socials
     display: flex

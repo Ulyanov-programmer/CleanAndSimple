@@ -114,6 +114,148 @@ body
 
     &__body
 
+.blog
+    position: relative
+    background: #F5F8FF
+
+    &__body
+        text-align: center
+        @include adaptive-property ('padding-top',90,30)
+        @include adaptive-property ('padding-bottom',90,30)
+
+    &__subtitle
+        padding: 0px 0px 30px 0px
+
+    &__title
+        padding: 0px 0px 50px 0px
+        color: #3D4F9F
+
+    &__slider
+
+    &__slider-pagination
+        bottom: 7% !important
+
+        @media (max-width: 1270px)
+            bottom: 4% !important
+        @media (max-width: 768px)
+            bottom: 10px !important
+        @media (max-width: 426px)
+            display: none
+
+        span
+            margin: 0px 5px 0px 5px !important
+            &:before
+                display: inline-block
+                content: ''
+                padding: 15px 15px 15px 15px
+
+                transform: translate(-30%,-30%)
+
+    &__slider-button-prev
+        left: 9% !important
+        z-index: 1 !important
+
+        &:after
+            padding: 50px 0px 50px 0px !important
+
+            content: url('../img/icons/sliderArrowLeft.svg') !important
+
+        @media (max-width: 768px)
+            display: none !important
+
+    &__slider-button-next
+        @extend .blog__slider-button-prev
+
+        left: 90% !important
+
+        &:after
+            transform: rotate(180deg)
+
+.post
+    background: #fff
+    border: 1px solid #D8E3FE
+
+    &__body
+        display: flex
+
+        padding: 60px 35px 60px 35px
+
+        @media (max-width: 1270px)
+            flex-flow: column-reverse nowrap
+        @media (max-width: 768px)
+            @include adaptive-property ('padding-top',40,20)
+            @include adaptive-property ('padding-bottom',40,20)
+            @include adaptive-property ('padding-right',20,10)
+            @include adaptive-property ('padding-left',20,10)
+
+    &__images-block
+        display: grid
+        grid-template: 'image image image' auto 'image image image' auto / 1fr 1fr 1fr
+        gap: 12px
+
+        flex: 0 0 50%
+
+        @media (min-width: 1270px)
+            padding: 0px 30px 0px 0px
+
+        @media (max-width: 768px)
+            grid-template: 'image image' auto 'image image' auto / 1fr 1fr
+
+    &__big-image
+        @extend .post__image
+
+        @media (min-width: 768px)
+            grid-column: span 2
+            grid-row: span 2
+
+    &__image
+        @media (max-width: 768px)
+            &:nth-child(2n + 1):first-child
+                grid-column: span 2
+
+        img
+            border-radius: 5px
+
+    &__text-block
+        text-align: left
+        flex: 0 0 50%
+        padding: 0px 0px 0px 30px
+
+        @media (max-width: 1270px)
+            padding: 0px 0px 30px 0px
+
+    &__title
+        color: #3D4F9F
+        font-family: Quicksand
+        @include adaptive-property ('font-size',36, 24)
+        padding: 0px 0px 30px 0px
+
+    &__text
+        line-height: 1.9
+        font-family: Roboto
+        padding: 0px 0px 30px 0px
+
+    &__read-more-ref
+        color: #3A79FF
+        background: #D2E1FF
+        padding: 13px 16px 13px 16px
+        border-radius: 2px
+
+        transition: all 0.2s ease
+        &:hover
+            color: #D2E1FF
+            background: #3A79FF
+
+    &__add-to-book
+        color: #A6B6DA
+        padding: 13px 16px 13px 16px
+        margin: 0px 0px 0px 10px
+
+        transition: all 0.05s ease
+        &:hover
+            color: #303030
+            background: #D2E1FF
+
 .about-app
     position: relative
     text-align: center

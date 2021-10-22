@@ -50,36 +50,55 @@
     parallax: true,
     */
     // });
-    const swiper = new Swiper('.customers-quotes__slider', {
+    const customersSwiper = new Swiper('.customers-quotes__slider', {
         autoplay: {
             delay: 3000,
             stopOnLastSlide: false,
         },
-        pagination: { 
+        pagination: {
             el: '.customers-quotes__pagination',
         },
 
-        // Changes the slider settings based on the width of the screen.
         breakpoints: {
-            // when window width is >= 320px
+            // when window width is >= 1270px
             1270: {
                 slidesPerView: 1.5,
                 spaceBetween: 70,
             },
         },
 
-
-        // Changes the height of the slider in runtime depending on the height of the slides.
         autoHeight: true,
         watchOverflow: true,
 
-        // Indent between slides.
-
-        // Enable parallax effect. For working add attributes:
         // data-swiper-parallax="0" (xRight)
         // data-swiper-parallax-duration="1000" (in ms)
         // on elements in swiper-slide.
 
         // parallax: true,
+    });
+    const blogSwiper = new Swiper('.blog__slider', {
+        autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+        },
+        breakpoints: {
+            // when window width is >= 1270px
+            768: {
+                allowTouchMove: false,
+                autoplay: null,
+            },
+        },
+        navigation: {
+            nextEl: ".blog__slider-button-next",
+            prevEl: ".blog__slider-button-prev",
+        },
+        pagination: {
+            el: '.blog__slider-pagination',
+            clickable: true,
+        },
+
+        autoHeight: true,
+        watchOverflow: true,
+        spaceBetween: 50,
     });
 </script>

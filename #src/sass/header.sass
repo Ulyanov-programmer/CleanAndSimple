@@ -60,10 +60,13 @@
                 @include adaptive-property ('padding-bottom',15,12)
 
                 color: #697CA6
+                font-family: Quicksand bold
                 @include size(100%, 100%)
 
                 &:hover
                     color: #565d76
+                &.active 
+                    color: #5E81FE
 
 .right-navmenu
 
@@ -165,7 +168,6 @@
     @include adaptive-property ('width', 30, 25)
     @include adaptive-property ('height', 30, 25)
     @include adaptive-property ('margin-right',30,10)
-    min-width: 30px
 
     img
         @include size (100%,100%)

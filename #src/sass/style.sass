@@ -114,6 +114,81 @@ body
 
     &__body
 
+.about-app
+    position: relative
+    text-align: center
+
+    &__body
+        @include adaptive-property ('padding-top',90,30)
+        @include adaptive-property ('padding-bottom',90,30)
+
+    &__subtitle
+        margin: 0px 0px 30px 0px
+
+    &__title
+        color: #3D4F9F
+        margin: 0px 0px 20px 0px
+
+    &__benefits-block
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+
+        @media (min-width: 1220px)
+            align-items: center
+
+        @include adaptive-property ('padding-top',50,30)
+        @include adaptive-property ('padding-bottom',50,30)
+
+    &__refs
+        display: flex
+        justify-content: center
+        align-items: center
+
+        span
+            text-transform: uppercase
+            display: inline-block
+            padding: 0px 15px 0px 15px
+
+        .determinater
+            @media (max-width: 560px)
+                display: none
+
+.benefits-item
+    @include adaptive-property ('width',120,90)
+    padding: 15px 0px 15px 0px
+
+    @media (max-width: 1220px)
+        margin: 0px 15px 0px 15px
+
+    &__body
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+
+    &__image
+        display: flex
+        justify-content: center
+        align-items: center
+        @include size (70px,70px)
+
+        background: #F1F5FF
+        border-radius: 50%
+        margin: 0px 0px 30px 0px
+
+        img
+
+    &__title
+        color: #4074F8
+        font-family: OpenSans bold
+        margin: 0px 0px 30px 0px
+
+    &__text
+        line-height: 1.7
+        font-family: OpenSans sbold
+        text-align: center
+
 .customers-quotes
     position: relative
     background: #EAF0FF
@@ -504,7 +579,7 @@ body
             flex-flow: column nowrap
 
     &__text-body
-        flex: 1 1 40%
+        flex: 1 0 40%
         margin: 0px 80px 0px 0px
 
         @media (max-width: 670px)
@@ -656,8 +731,23 @@ body
             a
                 padding-right: 35px
 
+.read-more-btn
+    color: #D43F3F
+    font-family: Quicksand bold
+    padding: 13px 16px 13px 16px
+    background: #FFD7D7
+
+    transition: all 0.2s ease
+
+    &:hover
+        color: #c93535
+        background: #fdbebe
+    &:active
+        transform: translate(0,5%)
+
 .get-started-btn
     color: #3A79FF
+    font-family: Quicksand bold
     padding: 13px 16px 13px 16px
     background: #D2E1FF
 
@@ -671,3 +761,13 @@ body
 
 .cloud
     pointer-events: none
+
+.determinater
+    display: inline-block
+    height: 2px
+    width: 28px
+    margin: 0px 20px 0px 20px
+    background: #DAE4FE
+
+    @media (max-width: 1220px)
+        display: none

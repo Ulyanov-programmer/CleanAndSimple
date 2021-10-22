@@ -5,12 +5,58 @@
     justify-content: center
 
     &__body
+        display: grid
+        grid-template: 'logo navrow' 1fr 'null copyright' 0.5fr / 10% 90%
+
+        @include adaptive-property ('padding-top',30,20)
+        @include adaptive-property ('padding-bottom',30,20)
+
+        @media (max-width: 768px)
+            grid-template: 'logo navrow' 1fr 'copyright copyright' 0.1fr / 20% 70%
+
+        @media (max-width: 426px)
+            grid-template: 'logo navrow' 1fr 'socials socials' 1fr 'copyright copyright' 0.1fr / 20% 70%
 
     &__top
+        grid-area: navrow
 
     &__copyright
+        grid-area: copyright
         display: flex
         align-items: center
-        padding: 0px 0px 0px 100px
+        @include adaptive-property ('padding-left',17,13)
+
+    &__socials
+        grid-area: socials
+
+        @media (min-width: 426px)
+            display: none
 
     .logo
+        grid-area: logo
+        margin: auto
+
+    .navmenu__body
+        padding: 15px 0px 15px 0px
+
+.footer__socials
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+
+    &-title
+
+    &-list
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &-social-item
+        a
+            display: flex
+            justify-content: center
+            padding: 20px 20px 20px 20px
+
+            img
+                transform: scale(1.5)

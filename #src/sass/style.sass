@@ -90,15 +90,21 @@ body
 
 .main-title
     font-family: Quicksand light
-    @include adaptive-property ('font-size',48, 32)
+    @include adaptive-property ('font-size',30, 20)
+    color: #3D4F9F
 
 .second-main-title
     @include adaptive-property ('font-size',36, 24)
 
-.fullscreen
-    // ? I recommend save this if you use sidepanel in fullscreen.
-    position: relative
+.content
 
+    &__body
+
+.fullscreen
+    position: relative
+    text-align: center
+    background: #ecf1ff
+    
     display: flex
     justify-content: center
     align-items: center
@@ -106,13 +112,174 @@ body
     @include size(auto, 100vh)
     @include adaptive-property ('min-height',500, 500)
 
-    // background: url('../img/') no-repeat center / cover
+    &__body
+        z-index: 1
+
+        @media (min-width: 1270px)
+            padding: 0px 0px 150px 0px
+
+        *
+            z-index: 1
+
+    &__bg-image
+        height: 50%
+        width: 100%
+        position: absolute
+        left: 0
+        bottom: 0
+
+        @media (max-width: 1270px)
+            display: none
+
+        img
+            @include size (100%,100%)
+            object-fit: fill
+
+    &__subtitle
+        padding: 0px 0px 20px 0px
+
+    &__title
+        font-family: Quicksand light
+        padding: 0px 0px 20px 0px
+
+        span
+            font-family: Quicksand bold
+
+    &__text
+        line-height: 1.9
+        padding: 0px 0px 20px 0px
+
+    &__play-btn
+        background: #fff
+        border-radius: 50%
+        img
+            padding: 20px 20px 20px 20px
+
+    &__top-left-cloud
+        top: 25%
+        left: 23%
+
+    &__center-left-cloud
+        top: 40%
+        left: 0%
+        transform: translate(0, -50%)
+
+    &__top-right-cloud
+        top: 17%
+        right: 12%
+
+    &__bottom-left-cloud
+        bottom: 15%
+        left: 20%
+
+    &__bottom-right-cloud
+        bottom: 0
+        right: 12%
+
+.mouse-event-point
+    position: absolute
+    z-index: 2
+    *
+        z-index: 2
+
+    @include adaptive-property ('width', 15, 12)
+    @include adaptive-property ('height', 15, 12)
+    border-radius: 50%
+    background: #fff
+    border: 3px solid #5E80FE
+
+    &:after
+        content: ''
+        display: inline-block
+
+        transform: translate(-43%,-120%)
+
+        height: 100px
+        width: 100px
+
+    &:hover
+        .mouse-event-point__content
+            visibility: visible
+            opacity: 1
+            pointer-events: all
+
+    &__content
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+
+        transition: all 0.2s ease
+        visibility: hidden
+        opacity: 0
+        pointer-events: none
+
+        padding: 15px 50px 15px 50px
+        background: #fff
+        border-radius: 3px
+        border: 2px solid #D8E0F7
+
+        transform: translate(-43%,-120%)
+
+        &::after
+            position: absolute
+            top: 100%
+            left: 50%
+            transform: translate(-50%, 0)
+
+            height: 100%
+            width: 100%
+
+            content: ''
+
+    @media (max-width: 1270px)
+        display: none
+
+.first-mouse-event-point
+    bottom: 5%
+    left: 5%
+
+.second-mouse-event-point
+    bottom: 10.3%
+    left: 40%
+
+.third-mouse-event-point
+    bottom: 29.7%
+    left: 65%
+
+.fourth-mouse-event-point
+    top: 50.4%
+    right: 5%
+
+.customers
 
     &__body
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        padding: 30px 0px 30px 0px
 
-.content
+        @media (max-width: 768px)
+            justify-content: center
 
-    &__body
+    &__customer
+        padding: 20px 20px 20px 20px
+
+.customer
+    display: inline-block
+
+    @media (min-width: 768px)
+        &:hover
+            .customer__logo
+                fill: #5982E7
+
+    &__logo
+        fill: #D6DAE5
+
+        transition: all 0.2s ease
+
+        @media (max-width: 768px)
+            fill: #5982E7
 
 .blog
     position: relative
@@ -645,6 +812,7 @@ body
             z-index: 1
 
     &__title
+        color: #fff
         margin: 0px 0px 30px 0px
         span
             font-family: Quicksand med
@@ -682,7 +850,6 @@ body
             color: #000
 
     &__clouds-left
-        position: absolute
         left: 0
         top: 50%
         top: 50%
@@ -696,7 +863,6 @@ body
                 object-fit: contain
 
     &__clouds-right
-        position: absolute
         right: 0
         top: 70%
         transform: translate(0, -50%)
@@ -902,6 +1068,7 @@ body
         transform: translate(0,5%)
 
 .cloud
+    position: absolute
     pointer-events: none
 
 .determinater

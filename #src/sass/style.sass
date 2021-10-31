@@ -262,7 +262,7 @@ body
         display: flex
         justify-content: center
         align-items: center
-    
+
     &__pagination
         bottom: 3% !important
 
@@ -419,6 +419,7 @@ body
         color: #3A79FF
         background: #D2E1FF
         padding: 13px 16px 13px 16px
+        margin: 0px 5px 0px 0px
         border-radius: 2px
 
         transition: all 0.2s ease
@@ -429,9 +430,9 @@ body
     &__add-to-book
         color: #A6B6DA
         padding: 13px 16px 13px 16px
-        margin: 0px 0px 0px 10px
 
         transition: all 0.05s ease
+
         &:hover
             color: #303030
             background: #D2E1FF
@@ -723,9 +724,11 @@ body
         border-color: #D1D1E4
         border-right: 1px solid #D1D1E4
         border-radius: 3px
+        margin: 0px 5px 0px 0px
 
         &:last-child
             border-right: 1px solid #D1D1E4
+            margin: 0px 0px 0px 0px
 
         &:hover
             background: #6f9af7
@@ -779,7 +782,7 @@ body
         padding-right: 90px
         padding-left: 90px
 
-        flex: 1 1 50%
+        flex: 0 1 50%
 
         *
             margin: 0px 0px 20px 0px
@@ -848,8 +851,10 @@ body
         transition: all 0.2s ease
 
         @media (max-width: 768px)
-            &:first-child
-                border-right: 1px solid #000
+            border-right: 1px solid #000
+            
+            &:last-child
+                border-right: 0px solid #000
 
         &:last-child
             border-right: 1px solid #fff

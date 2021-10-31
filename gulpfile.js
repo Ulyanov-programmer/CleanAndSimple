@@ -43,7 +43,6 @@ let { scr, dest } = require('gulp'),
     imagemin = require('gulp-imagemin'),
     webp = require('gulp-webp'),
     webpHtml = require('gulp-webp-html'),
-    ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
     fonter = require('gulp-fonter');
 

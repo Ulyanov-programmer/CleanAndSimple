@@ -15,7 +15,7 @@
             grid-template: 'logo navrow' 1fr 'copyright copyright' 0.1fr / 20% 70%
 
         @media (max-width: 426px)
-            grid-template: 'logo navrow' 1fr 'socials socials' 1fr 'copyright copyright' 0.1fr / 20% 70%
+            grid-template: 'logo navrow' 1fr 'logo socials' 1fr 'copyright copyright' 0.1fr / 20% 70%
 
     &__top
         grid-area: navrow
@@ -25,6 +25,7 @@
         display: flex
         align-items: center
         @include adaptive-property ('padding-left',17,13)
+        padding: 5px 0px 5px 0px
 
     &__socials
         grid-area: socials
@@ -43,7 +44,7 @@
     display: flex
     flex-flow: column nowrap
     justify-content: center
-    align-items: center
+    align-items: start
 
     &-title
 

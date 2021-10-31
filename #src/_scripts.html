@@ -1,4 +1,4 @@
-<script defer src="scripts/script.js"></script>
+<script defer src="scripts/script.min.js"></script>
 
 <!-- Swiper -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js">
@@ -19,12 +19,6 @@
 
         autoHeight: true,
         watchOverflow: true,
-
-        // data-swiper-parallax="0" (xRight)
-        // data-swiper-parallax-duration="1000" (in ms)
-        // on elements in swiper-slide.
-
-        // parallax: true,
     });
     const blogSwiper = new Swiper('.blog__slider', {
         autoplay: {
@@ -35,7 +29,7 @@
             // when window width is >= 1270px
             768: {
                 allowTouchMove: false,
-                autoplay: null,
+                autoplay: {},
             },
         },
         navigation: {

@@ -11,62 +11,649 @@
     <main class="main">
         <div class="main__body">
             <section class="fullscreen">
-                
-                <div class="fullscreen__mouse-event-pointers">
-                    <div class="first-mouse-event-point mouse-event-point">
-                        <div class="mouse-event-point__content">
-                            <img src="img/icons/fsIcon1.svg" alt="productivity">
-                        </div>
-                    </div>
-                    <div class="second-mouse-event-point mouse-event-point">
-                        <div class="mouse-event-point__content">
-                            <img src="img/icons/fsIcon1.svg" alt="productivity">
-                        </div>
-                    </div>
-                    <div class="third-mouse-event-point mouse-event-point">
-                        <div class="mouse-event-point__content">
-                            <img src="img/icons/fsIcon1.svg" alt="productivity">
-                        </div>
-                    </div>
-                    <div class="fourth-mouse-event-point mouse-event-point">
-                        <div class="mouse-event-point__content">
-                            <img src="img/icons/fsIcon1.svg" alt="productivity">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class='fullscreen__bg-image'>
-                    <img src="img/fs-chart.svg" loading='lazy' alt='chats'>
-                </div>
-                <div class="fullscreen-clouds">
-                    <div class="fullscreen__top-left-cloud cloud">
-                        <img src="img/fs-clouds-top-left.svg" alt="cloud">
-                    </div>
-                    <div class="fullscreen__center-left-cloud cloud">
-                        <img src="img/fs-clouds-center-left.svg" alt="cloud">
-                    </div>
-                    <div class="fullscreen__top-right-cloud cloud">
-                        <img src="img/fs-clouds-top-right.svg" alt="cloud">
-                    </div>
-                    <div class="fullscreen__bottom-left-cloud cloud">
-                        <img src="img/fs-clouds-bottom-left.svg" alt="cloud">
-                    </div>
-                    <div class="fullscreen__bottom-right-cloud cloud">
-                        <img src="img/fs-clouds-bottom-right.svg" alt="cloud">
-                    </div>
-                </div>
+                <div class="fs-slider swiper">
+                    <div class='swiper-wrapper'>
+                        <div class='swiper-slide fs-slider__slide'>
+                            <div class="fullscreen__mouse-event-pointers">
+                                <div class="first-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="second-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="third-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="fourth-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                            </div>
 
-                <div class="fullscreen__body container">
-                    <span class="fullscreen__subtitle subtitle">PLAN YOUR life</span>
-                    <h1 class="fullscreen__title main-title">Increase your <span>productivity</span></h1>
-                    <p class="fullscreen__text">
-                        Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens
-                        gubergren similique est
-                        cu. Et vel modus congue vituperata.
-                    </p>
-                    <button class="fullscreen__play-btn" data-modal-link="video" type='button'>
-                        <img src="img/icons/playArrow.svg" alt="playVideo">
-                    </button>
+                            <div class='fullscreen__bg-image'>
+                                <img src="img/fs-chart.svg" loading='lazy' alt='chats'>
+                            </div>
+                            <div class="fullscreen-clouds">
+                                <div class="fullscreen__top-left-cloud cloud">
+                                    <img src="img/fs-clouds-top-left.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__center-left-cloud cloud">
+                                    <img src="img/fs-clouds-center-left.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__top-right-cloud cloud">
+                                    <img src="img/fs-clouds-top-right.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__bottom-left-cloud cloud">
+                                    <!-- Don't ask me, some of the images just didn't show. -->
+
+                                    <svg width="164" height="125" viewBox="0 0 164 125" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_59347:5)">
+                                            <path
+                                                d="M56.7205 52.4798C50.2474 52.4798 45 57.8297 45 64.4293H68.441C68.441 57.8297 63.1935 52.4798 56.7205 52.4798Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter1_d_59347:5)">
+                                            <path
+                                                d="M102.683 58.4546C93.6717 58.4546 86.3665 65.8622 86.3665 75H119C119 65.8622 111.695 58.4546 102.683 58.4546Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter2_d_59347:5)">
+                                            <path
+                                                d="M78.0933 50.1818C64.3857 50.1818 53.2734 61.2933 53.2734 75H102.913C102.913 61.2933 91.801 50.1818 78.0933 50.1818Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter3_d_59347:5)">
+                                            <path
+                                                d="M109.112 40C103.651 40 99.2241 44.5586 99.2241 50.1818H119C119 44.5586 114.573 40 109.112 40Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_59347:5" x="0" y="12.4798" width="113.441"
+                                                height="101.949" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter1_d_59347:5" x="41.3665" y="18.4546" width="122.634"
+                                                height="106.545" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter2_d_59347:5" x="8.27344" y="10.1818" width="139.64"
+                                                height="114.818" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter3_d_59347:5" x="54.2241" y="0" width="109.776"
+                                                height="100.182" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="fullscreen__bottom-right-cloud cloud">
+                                    <!-- Don't ask me, some of the images just didn't show. -->
+
+                                    <svg width="245" height="154" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_9:427)">
+                                            <path
+                                                d="M165.011 69.46C146.227 69.46 131 84.923 131 104h68.021c0-19.076-15.227-34.54-34.01-34.54z"
+                                                fill="#fff" />
+                                        </g>
+                                        <g filter="url(#filter1_d_9:427)">
+                                            <path
+                                                d="M141.684 40C128.603 40 118 50.782 118 64.081h47.367c0-13.3-10.603-24.081-23.683-24.081z"
+                                                fill="#fff" />
+                                        </g>
+                                        <g filter="url(#filter2_d_9:427)">
+                                            <path
+                                                d="M96.734 52.19C68.162 52.19 45 75.385 45 104h103.469c0-28.614-23.163-51.81-51.735-51.81z"
+                                                fill="#fff" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_9:427" x="86" y="29.459" width="158.021"
+                                                height="124.541" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                            <filter id="filter1_d_9:427" x="73" y="0" width="137.367" height="114.081"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                            <filter id="filter2_d_9:427" x="0" y="12.189" width="193.469"
+                                                height="141.811" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="fullscreen__body container">
+                                <span class="fullscreen__subtitle subtitle">PLAN YOUR life</span>
+                                <h1 class="fullscreen__title main-title">Increase your <span>productivity</span></h1>
+                                <p class="fullscreen__text">
+                                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an,
+                                    insolens
+                                    gubergren similique est
+                                    cu. Et vel modus congue vituperata.
+                                </p>
+                                <button class="fullscreen__play-btn" data-modal-link="video" type='button'>
+                                    <img src="img/icons/playArrow.svg" alt="playVideo">
+                                </button>
+                            </div>
+                        </div>
+                        <div class='swiper-slide fs-slider__slide'>
+                            <div class="fullscreen__mouse-event-pointers">
+                                <div class="first-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="second-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="third-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="fourth-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='fullscreen__bg-image'>
+                                <img src="img/fs-chart.svg" loading='lazy' alt='chats'>
+                            </div>
+                            <div class="fullscreen-clouds">
+                                <div class="fullscreen__top-left-cloud cloud">
+                                    <img src="img/fs-clouds-top-left.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__center-left-cloud cloud">
+                                    <img src="img/fs-clouds-center-left.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__top-right-cloud cloud">
+                                    <img src="img/fs-clouds-top-right.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__bottom-left-cloud cloud">
+                                    <!-- Don't ask me, some of the images just didn't show. -->
+
+                                    <svg width="164" height="125" viewBox="0 0 164 125" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_59347:5)">
+                                            <path
+                                                d="M56.7205 52.4798C50.2474 52.4798 45 57.8297 45 64.4293H68.441C68.441 57.8297 63.1935 52.4798 56.7205 52.4798Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter1_d_59347:5)">
+                                            <path
+                                                d="M102.683 58.4546C93.6717 58.4546 86.3665 65.8622 86.3665 75H119C119 65.8622 111.695 58.4546 102.683 58.4546Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter2_d_59347:5)">
+                                            <path
+                                                d="M78.0933 50.1818C64.3857 50.1818 53.2734 61.2933 53.2734 75H102.913C102.913 61.2933 91.801 50.1818 78.0933 50.1818Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter3_d_59347:5)">
+                                            <path
+                                                d="M109.112 40C103.651 40 99.2241 44.5586 99.2241 50.1818H119C119 44.5586 114.573 40 109.112 40Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_59347:5" x="0" y="12.4798" width="113.441"
+                                                height="101.949" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter1_d_59347:5" x="41.3665" y="18.4546" width="122.634"
+                                                height="106.545" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter2_d_59347:5" x="8.27344" y="10.1818" width="139.64"
+                                                height="114.818" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter3_d_59347:5" x="54.2241" y="0" width="109.776"
+                                                height="100.182" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="fullscreen__bottom-right-cloud cloud">
+                                    <!-- Don't ask me, some of the images just didn't show. -->
+
+                                    <svg width="245" height="154" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_9:427)">
+                                            <path
+                                                d="M165.011 69.46C146.227 69.46 131 84.923 131 104h68.021c0-19.076-15.227-34.54-34.01-34.54z"
+                                                fill="#fff" />
+                                        </g>
+                                        <g filter="url(#filter1_d_9:427)">
+                                            <path
+                                                d="M141.684 40C128.603 40 118 50.782 118 64.081h47.367c0-13.3-10.603-24.081-23.683-24.081z"
+                                                fill="#fff" />
+                                        </g>
+                                        <g filter="url(#filter2_d_9:427)">
+                                            <path
+                                                d="M96.734 52.19C68.162 52.19 45 75.385 45 104h103.469c0-28.614-23.163-51.81-51.735-51.81z"
+                                                fill="#fff" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_9:427" x="86" y="29.459" width="158.021"
+                                                height="124.541" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                            <filter id="filter1_d_9:427" x="73" y="0" width="137.367" height="114.081"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                            <filter id="filter2_d_9:427" x="0" y="12.189" width="193.469"
+                                                height="141.811" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="fullscreen__body container">
+                                <span class="fullscreen__subtitle subtitle">PLAN YOUR life</span>
+                                <h1 class="fullscreen__title main-title">Increase your <span>productivity</span></h1>
+                                <p class="fullscreen__text">
+                                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an,
+                                    insolens
+                                    gubergren similique est
+                                    cu. Et vel modus congue vituperata.
+                                </p>
+                                <button class="fullscreen__play-btn" data-modal-link="video" type='button'>
+                                    <img src="img/icons/playArrow.svg" alt="playVideo">
+                                </button>
+                            </div>
+                        </div>
+                        <div class='swiper-slide fs-slider__slide'>
+                            <div class="fullscreen__mouse-event-pointers">
+                                <div class="first-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="second-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="third-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                                <div class="fourth-mouse-event-point mouse-event-point">
+                                    <div class="mouse-event-point__content">
+                                        <img src="img/icons/fsIcon1.svg" alt="productivity">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='fullscreen__bg-image'>
+                                <img src="img/fs-chart.svg" loading='lazy' alt='chats'>
+                            </div>
+                            <div class="fullscreen-clouds">
+                                <div class="fullscreen__top-left-cloud cloud">
+                                    <img src="img/fs-clouds-top-left.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__center-left-cloud cloud">
+                                    <img src="img/fs-clouds-center-left.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__top-right-cloud cloud">
+                                    <img src="img/fs-clouds-top-right.svg" alt="cloud">
+                                </div>
+                                <div class="fullscreen__bottom-left-cloud cloud">
+                                    <!-- Don't ask me, some of the images just didn't show. -->
+
+                                    <svg width="164" height="125" viewBox="0 0 164 125" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_59347:5)">
+                                            <path
+                                                d="M56.7205 52.4798C50.2474 52.4798 45 57.8297 45 64.4293H68.441C68.441 57.8297 63.1935 52.4798 56.7205 52.4798Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter1_d_59347:5)">
+                                            <path
+                                                d="M102.683 58.4546C93.6717 58.4546 86.3665 65.8622 86.3665 75H119C119 65.8622 111.695 58.4546 102.683 58.4546Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter2_d_59347:5)">
+                                            <path
+                                                d="M78.0933 50.1818C64.3857 50.1818 53.2734 61.2933 53.2734 75H102.913C102.913 61.2933 91.801 50.1818 78.0933 50.1818Z"
+                                                fill="white" />
+                                        </g>
+                                        <g filter="url(#filter3_d_59347:5)">
+                                            <path
+                                                d="M109.112 40C103.651 40 99.2241 44.5586 99.2241 50.1818H119C119 44.5586 114.573 40 109.112 40Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_59347:5" x="0" y="12.4798" width="113.441"
+                                                height="101.949" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter1_d_59347:5" x="41.3665" y="18.4546" width="122.634"
+                                                height="106.545" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter2_d_59347:5" x="8.27344" y="10.1818" width="139.64"
+                                                height="114.818" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                            <filter id="filter3_d_59347:5" x="54.2241" y="0" width="109.776"
+                                                height="100.182" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_59347:5" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect1_dropShadow_59347:5" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="fullscreen__bottom-right-cloud cloud">
+                                    <!-- Don't ask me, some of the images just didn't show. -->
+
+                                    <svg width="245" height="154" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_9:427)">
+                                            <path
+                                                d="M165.011 69.46C146.227 69.46 131 84.923 131 104h68.021c0-19.076-15.227-34.54-34.01-34.54z"
+                                                fill="#fff" />
+                                        </g>
+                                        <g filter="url(#filter1_d_9:427)">
+                                            <path
+                                                d="M141.684 40C128.603 40 118 50.782 118 64.081h47.367c0-13.3-10.603-24.081-23.683-24.081z"
+                                                fill="#fff" />
+                                        </g>
+                                        <g filter="url(#filter2_d_9:427)">
+                                            <path
+                                                d="M96.734 52.19C68.162 52.19 45 75.385 45 104h103.469c0-28.614-23.163-51.81-51.735-51.81z"
+                                                fill="#fff" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_d_9:427" x="86" y="29.459" width="158.021"
+                                                height="124.541" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                            <filter id="filter1_d_9:427" x="73" y="0" width="137.367" height="114.081"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                            <filter id="filter2_d_9:427" x="0" y="12.189" width="193.469"
+                                                height="141.811" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="22.5" />
+                                                <feColorMatrix
+                                                    values="0 0 0 0 0.593724 0 0 0 0 0.684469 0 0 0 0 0.888646 0 0 0 0.1 0" />
+                                                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_9:427" />
+                                                <feBlend in="SourceGraphic" in2="effect1_dropShadow_9:427"
+                                                    result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="fullscreen__body container">
+                                <span class="fullscreen__subtitle subtitle">PLAN YOUR life</span>
+                                <h1 class="fullscreen__title main-title">Increase your <span>productivity</span></h1>
+                                <p class="fullscreen__text">
+                                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an,
+                                    insolens
+                                    gubergren similique est
+                                    cu. Et vel modus congue vituperata.
+                                </p>
+                                <button class="fullscreen__play-btn" data-modal-link="video" type='button'>
+                                    <img src="img/icons/playArrow.svg" alt="playVideo">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='swiper-pagination fs-slider__pagination'></div>
                 </div>
             </section>
             <section class='customers'>
@@ -255,7 +842,42 @@
                                         <article class="post">
                                             <div class="post__body">
                                                 <div class="post__images-block">
-                                                    <div class='adaptive-image post__big-image'>
+                                                    <div class='adaptive-image post__image post__big-image'>
+                                                        <img src="img/postImg1.png" loading='lazy' alt='image1'>
+                                                    </div>
+                                                    <div class='adaptive-image post__image'>
+                                                        <img src="img/postImg2.png" loading='lazy' alt='image2'>
+                                                    </div>
+                                                    <div class='adaptive-image post__image'>
+                                                        <img src="img/postImg3.png" loading='lazy' alt='image3'>
+                                                    </div>
+                                                </div>
+
+                                                <div class="post__text-block">
+                                                    <h3 class="post__title">How to start planning</h3>
+                                                    <p class="post__text">
+                                                        Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                                                        nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
+                                                        diceret persecuti. Natum petentium principes mei ea. Tota
+                                                        everti periculis vis ei, quas tibique pro at, eos ut decore
+                                                    </p>
+                                                    <a href='#' class="post__read-more-ref" target='_blank'
+                                                        rel='noopener noreferrer'>
+                                                        Read now
+                                                    </a>
+                                                    <button class="post__add-to-book" aria-label='addToBookmarks'
+                                                        type='button'>
+                                                        Add to your bookmarks
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post">
+                                            <div class="post__body">
+                                                <div class="post__images-block">
+                                                    <div class='adaptive-image post__image post__big-image'>
                                                         <img src="img/postImg1.png" loading='lazy' alt='image1'>
                                                     </div>
                                                     <div class='adaptive-image post__image'>
@@ -290,42 +912,7 @@
                                         <article class="post">
                                             <div class="post__body">
                                                 <div class="post__images-block">
-                                                    <div class='adaptive-image post__big-image'>
-                                                        <img src="img/postImg1.png" loading='lazy' alt='image1'>
-                                                    </div>
-                                                    <div class='adaptive-image post__image'>
-                                                        <img src="img/postImg2.png" loading='lazy' alt='image1'>
-                                                    </div>
-                                                    <div class='adaptive-image post__image'>
-                                                        <img src="img/postImg3.png" loading='lazy' alt='image1'>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post__text-block">
-                                                    <h3 class="post__title">How to start planning</h3>
-                                                    <p class="post__text">
-                                                        Quidam vocibus eum ne, erat consectetuer voluptatibus ut
-                                                        nam. Eu usu vidit tractatos, vero tractatos ius an, in mel
-                                                        diceret persecuti. Natum petentium principes mei ea. Tota
-                                                        everti periculis vis ei, quas tibique pro at, eos ut decore
-                                                    </p>
-                                                    <a href='#' class="post__read-more-ref" target='_blank'
-                                                        rel='noopener noreferrer'>
-                                                        Read now
-                                                    </a>
-                                                    <button class="post__add-to-book" aria-label='addToBookmarks'
-                                                        type='button'>
-                                                        Add to your bookmarks
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <article class="post">
-                                            <div class="post__body">
-                                                <div class="post__images-block">
-                                                    <div class='adaptive-image post__big-image'>
+                                                    <div class='adaptive-image post__image post__big-image'>
                                                         <img src="img/postImg1.png" loading='lazy' alt='image1'>
                                                     </div>
                                                     <div class='adaptive-image post__image'>
@@ -554,11 +1141,19 @@
     <section id="video" class='modal-window'>
         <div class="modal-window__body">
             <div class="modal-window__content">
-                <button type='button' class="modal-closer">close me</button>
-                <video poster="video/previewVideo.png" controls>
-                    <source src="video/main-video.webm" type="video/webm">
-                    <source src="video/main-video.mp4" type="video/mp4">
-                </video>
+                <div class="modal-window__video">
+                    <video poster="video/previewVideo.png" controls>
+                        <source src="video/main-video.webm" type="video/webm">
+                        <source src="video/main-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="imageModal" class='modal-window'>
+        <div class="modal-window__body">
+            <div class="modal-window__content">
+
             </div>
         </div>
     </section>

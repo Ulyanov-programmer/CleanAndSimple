@@ -10,3 +10,27 @@ let innerWindowHeight = () => window.innerHeight;
 @@include('_spoiler.js');
 @@include('_fsNavmenu.js');
 
+function showImgFullscreen(e) {
+    let targetImg = e.target.closest('img')
+
+    let imgModal = doc.querySelector('#imageModal')
+    let imgModalContent = imgModal.querySelector('.modal-window__content');
+
+    if (!targetImg) {
+        regurn;
+    } else {
+        imgModalContent.innerHTML = '';
+
+        let imageClone = targetImg.cloneNode();
+        imageClone.classList.add('modal-window__image');
+        imgModalContent.insertAdjacentElement('afterbegin', imageClone);
+
+        showOrHideModal(imgModal);
+    }
+}
+
+let postImgBlocks = doc.querySelectorAll('.post__images-block');
+for (const postImgBlock of postImgBlocks) {
+    postImgBlock.addEventListener('click', showImgFullscreen);
+}
+

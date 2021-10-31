@@ -90,7 +90,7 @@ body
 
 .main-title
     font-family: Quicksand light
-    @include adaptive-property ('font-size',30, 20)
+    @include adaptive-property ('font-size',30, 25)
     color: #3D4F9F
 
 .second-main-title
@@ -104,8 +104,7 @@ body
     position: relative
     text-align: center
     background: #ecf1ff
-    
-    display: flex
+
     justify-content: center
     align-items: center
 
@@ -115,8 +114,7 @@ body
     &__body
         z-index: 1
 
-        @media (min-width: 1270px)
-            padding: 0px 0px 150px 0px
+        padding: 0px 0px 0px 0px
 
         *
             z-index: 1
@@ -172,9 +170,15 @@ body
         bottom: 15%
         left: 20%
 
+        @media (max-width: 426px)
+            left: 0
+
     &__bottom-right-cloud
         bottom: 0
         right: 12%
+
+        @media (max-width: 426px)
+            right: 0%
 
 .mouse-event-point
     position: absolute
@@ -250,6 +254,17 @@ body
 .fourth-mouse-event-point
     top: 50.4%
     right: 5%
+
+.fs-slider
+    height: 100%
+
+    &__slide
+        display: flex
+        justify-content: center
+        align-items: center
+    
+    &__pagination
+        bottom: 3% !important
 
 .customers
 
@@ -369,8 +384,6 @@ body
             grid-template: 'image image' auto 'image image' auto / 1fr 1fr
 
     &__big-image
-        @extend .post__image
-
         @media (min-width: 768px)
             grid-column: span 2
             grid-row: span 2
@@ -1012,6 +1025,25 @@ body
         height: 100%
         justify-content: center
         align-items: center
+
+    &__content
+
+    &__video
+        position: relative
+        padding: 0px 0px 57% 0px
+        width: 70vw
+
+        @media (max-width: 768px)
+            width: 85vw
+
+        video
+            position: absolute
+            top: 0
+            left: 0
+            @include size (100%,100%)
+
+    &__image
+        @include size (auto,60vh)
 
 .socials
     display: flex

@@ -4,57 +4,7 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js">
 </script>
 <script>
-    // const swiper = new Swiper('.swiper', {
-    /*
-    navigation: {
-        // Enter nav button classes here.
-        nextEl: ".next",
-        prevEl: ".prev",
-    },
-
-    autoplay:{
-        delay: 3000,
-        stopOnLastSlide: false,
-    },
-
-    // Infinity
-    loop: false,
-    
-    // Changes the slider settings based on the width of the screen.
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-    },
-
-    
-    // Changes the height of the slider in runtime depending on the height of the slides.
-    autoHeight: true,
-
-    slidesPerView: 1,
-
-    // If there are no more than one slides, the slider stops working.
-    watchOverflow: true,
-    direction: 'horizontal' or 'vertical',
-
-    // Indent between slides.
-    spaceBetween: 150,
-
-    // Enable parallax effect. For working add attributes:
-    data-swiper-parallax="0" (xRight)
-    data-swiper-parallax-duration="1000" (in ms)
-    on elements in swiper-slide.
-
-    parallax: true,
-    */
-    // });
     const customersSwiper = new Swiper('.customers-quotes__slider', {
-        autoplay: {
-            delay: 3000,
-            stopOnLastSlide: false,
-        },
         pagination: {
             el: '.customers-quotes__pagination',
         },
@@ -76,53 +26,44 @@
 
         // parallax: true,
     });
-    const fsSwiper = new Swiper('.fullscreen__slider', {
+    const blogSwiper = new Swiper('.blog__slider', {
         autoplay: {
             delay: 3000,
             stopOnLastSlide: false,
         },
-        // breakpoints: {
-        //     // when window width is >= 1270px
-        //     768: {
-        //         allowTouchMove: false,
-        //         autoplay: null,
-        //     },
-        // },
-        // navigation: {
-        //     nextEl: ".blog__slider-button-next",
-        //     prevEl: ".blog__slider-button-prev",
-        // },
-        // pagination: {
-        //     el: '.fullscreen__pagination',
-        //     clickable: true,
-        // },
+        breakpoints: {
+            // when window width is >= 1270px
+            768: {
+                allowTouchMove: false,
+                autoplay: null,
+            },
+        },
+        navigation: {
+            nextEl: ".blog__slider-button-next",
+            prevEl: ".blog__slider-button-prev",
+        },
+        pagination: {
+            el: '.blog__slider-pagination',
+            clickable: true,
+        },
 
+        autoHeight: true,
+        watchOverflow: true,
         spaceBetween: 50,
     });
-    const customersSwiper = new Swiper('.customers-quotes__slider', {
-            autoplay: {
-                delay: 3000,
-                stopOnLastSlide: false,
-            },
-            pagination: {
-                el: '.customers-quotes__pagination',
-            },
+</script>
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
-            breakpoints: {
-                // when window width is >= 1270px
-                1270: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 70,
-                },
-            },
-
-            autoHeight: true,
-            watchOverflow: true,
-
-            // data-swiper-parallax="0" (xRight)
-            // data-swiper-parallax-duration="1000" (in ms)
-            // on elements in swiper-slide.
-
-            // parallax: true,
-        });
+    const fsSwiper = new Swiper('.fs-slider', {
+        autoplay: {
+            delay: 7000,
+            stopOnLastSlide: false,
+        },
+        pagination: {
+            el: '.fs-slider__pagination',
+            clickable: true,
+        },
+        watchOverflow: true,
+    });
 </script>

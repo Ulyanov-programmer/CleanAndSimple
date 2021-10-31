@@ -658,7 +658,7 @@ body button {
 
 .main-title {
   font-family: Quicksand light;
-  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (743 - 320)));
+  font-size: calc(25px + (30 - 25) * ((100vw - 320px) / (743 - 320)));
   color: #3D4F9F;
 }
 
@@ -670,9 +670,6 @@ body button {
   position: relative;
   text-align: center;
   background: #ecf1ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -686,6 +683,7 @@ body button {
 
 .fullscreen__body {
   z-index: 1;
+  padding: 0px 0px 0px 0px;
 }
 
 .fullscreen__body * {
@@ -850,6 +848,26 @@ body button {
   right: 5%;
 }
 
+.fs-slider {
+  height: 100%;
+}
+
+.fs-slider__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fs-slider__pagination {
+  bottom: 3% !important;
+}
+
 .customers__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -959,8 +977,7 @@ body button {
           flex: 0 0 50%;
 }
 
-.post__image img,
-.post__big-image img {
+.post__image img {
   border-radius: 5px;
 }
 
@@ -1633,6 +1650,25 @@ body button {
           align-items: center;
 }
 
+.modal-window__video {
+  position: relative;
+  padding: 0px 0px 57% 0px;
+  width: 70vw;
+}
+
+.modal-window__video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-window__image {
+  width: auto;
+  height: 60vh;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1773,10 +1809,6 @@ body button {
 }
 
 @media (min-width: 1270px) {
-  .fullscreen__body {
-    padding: 0px 0px 150px 0px;
-  }
-
   .post__images-block {
     padding: 0px 30px 0px 0px;
   }
@@ -1940,8 +1972,7 @@ body button {
     grid-template: 'image image' auto 'image image' auto / 1fr 1fr;
   }
 
-  .post__image:nth-child(2n + 1):first-child,
-  .post__big-image:nth-child(2n + 1):first-child {
+  .post__image:nth-child(2n + 1):first-child {
     grid-column: span 2;
   }
 
@@ -1968,6 +1999,10 @@ body button {
 
   .get-started__ref:first-child {
     border-right: 1px solid #000;
+  }
+
+  .modal-window__video {
+    width: 85vw;
   }
 }
 
@@ -2069,6 +2104,14 @@ body button {
 
   .footer__body {
     grid-template: 'logo navrow' 1fr 'socials socials' 1fr 'copyright copyright' 0.1fr / 20% 70%;
+  }
+
+  .fullscreen__bottom-left-cloud {
+    left: 0;
+  }
+
+  .fullscreen__bottom-right-cloud {
+    right: 0%;
   }
 
   .blog__slider-pagination {

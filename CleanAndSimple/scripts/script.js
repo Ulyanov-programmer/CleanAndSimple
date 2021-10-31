@@ -71,7 +71,14 @@ function showOrHideModal(modalElement) {
 
 function closeModal(modalWindow, bodyIsScrollable) {
     if (unlock) {
+        let video = document.querySelector('video');
+        let videoClone = video.cloneNode(true);
+
         modalWindow.classList.remove("active");
+        setTimeout(() => {
+            video.insertAdjacentElement('afterend', videoClone);
+            video.remove();
+        }, 300);
 
         if (bodyIsScrollable) {
             toggleBodyScroll(true);
@@ -232,4 +239,28 @@ const burger = doc.getElementById('burgerButton');
 burger.addEventListener('click', showOrHideFullscreenNav);
 
 let fsMenuIsActive = false;;
+
+function showImgFullscreen(e) {
+    let targetImg = e.target.closest('img')
+
+    let imgModal = doc.querySelector('#imageModal')
+    let imgModalContent = imgModal.querySelector('.modal-window__content');
+
+    if (!targetImg) {
+        regurn;
+    } else {
+        imgModalContent.innerHTML = '';
+
+        let imageClone = targetImg.cloneNode();
+        imageClone.classList.add('modal-window__image');
+        imgModalContent.insertAdjacentElement('afterbegin', imageClone);
+
+        showOrHideModal(imgModal);
+    }
+}
+
+let postImgBlocks = doc.querySelectorAll('.post__images-block');
+for (const postImgBlock of postImgBlocks) {
+    postImgBlock.addEventListener('click', showImgFullscreen);
+}
 

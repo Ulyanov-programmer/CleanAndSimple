@@ -63,7 +63,14 @@ function showOrHideModal(modalElement) {
 
 function closeModal(modalWindow, bodyIsScrollable) {
     if (unlock) {
+        let video = document.querySelector('video');
+        let videoClone = video.cloneNode(true);
+
         modalWindow.classList.remove("active");
+        setTimeout(() => {
+            video.insertAdjacentElement('afterend', videoClone);
+            video.remove();
+        }, 300);
 
         if (bodyIsScrollable) {
             toggleBodyScroll(true);

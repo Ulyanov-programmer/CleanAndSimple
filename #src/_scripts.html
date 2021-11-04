@@ -4,6 +4,21 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js">
 </script>
 <script>
+    const fsSwiper = new Swiper('.fs-slider', {
+        autoplay: {
+            delay: 7000,
+            stopOnLastSlide: false,
+        },
+        pagination: {
+            el: '.fs-slider__pagination',
+            clickable: true,
+        },
+        watchOverflow: true,
+    });
+</script>
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+
     const customersSwiper = new Swiper('.customers-quotes__slider', {
         pagination: {
             el: '.customers-quotes__pagination',
@@ -20,17 +35,11 @@
         autoHeight: true,
         watchOverflow: true,
     });
+
     const blogSwiper = new Swiper('.blog__slider', {
         autoplay: {
             delay: 3000,
             stopOnLastSlide: false,
-        },
-        breakpoints: {
-            // when window width is >= 1270px
-            768: {
-                allowTouchMove: false,
-                autoplay: {},
-            },
         },
         navigation: {
             nextEl: ".blog__slider-button-next",
@@ -44,20 +53,14 @@
         autoHeight: true,
         watchOverflow: true,
         spaceBetween: 50,
-    });
-</script>
-<script type="module">
-    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
-    const fsSwiper = new Swiper('.fs-slider', {
-        autoplay: {
-            delay: 7000,
-            stopOnLastSlide: false,
+
+        breakpoints: {
+            // when window width is >= 1270px
+            768: {
+                allowTouchMove: false,
+                autoplay: { delay: 999999999 },
+            },
         },
-        pagination: {
-            el: '.fs-slider__pagination',
-            clickable: true,
-        },
-        watchOverflow: true,
     });
 </script>

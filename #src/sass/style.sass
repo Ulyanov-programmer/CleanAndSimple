@@ -389,12 +389,34 @@ body
             grid-row: span 2
 
     &__image
+        position: relative
+        &:hover
+            cursor: pointer
+            &:after
+                visibility: visible
+                opacity: 1
+
+        &:after
+            transition: all 0.2s ease
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+            content: url('../img/icons/showTheImg.svg')
+            z-index: 1
+
+            visibility: hidden
+            opacity: 0
+            pointer-events: none
+
         @media (max-width: 768px)
             &:nth-child(2n + 1):first-child
                 grid-column: span 2
 
         img
             border-radius: 5px
+            &:hover
 
     &__text-block
         text-align: left
@@ -442,6 +464,8 @@ body
     text-align: center
 
     &__body
+        *
+            z-index: 1
         @include adaptive-property ('padding-top',90,30)
         @include adaptive-property ('padding-bottom',90,30)
 
@@ -476,6 +500,25 @@ body
         .determinater
             @media (max-width: 560px)
                 display: none
+
+    &__cloud-top-left
+        top: 15%
+        left: 15%
+
+    &__cloud-top-right
+        top: 20%
+        right: 5%
+
+        @media (max-width: 768px)
+            top: 50%
+            right: 10%
+
+    &__cloud-bottom-left
+        bottom: 17%
+        left: 5%
+
+        @media (max-width: 768px)
+            bottom: 3%
 
 .benefits-item
     @include adaptive-property ('width',120,90)
@@ -562,8 +605,12 @@ body
             width: 100% !important
 
     &-slide
+        cursor: grab
         padding: 0px 0px 150px 0px
         opacity: 45%
+
+        &:active
+            cursor: grabbing
 
         &__body
             position: relative
@@ -817,6 +864,9 @@ body
     position: relative
 
     &__body
+        position: relative
+        *
+            z-index: 1
         text-align: center
         color: #fff
         @include adaptive-property ('padding-top',50,30)
@@ -852,7 +902,7 @@ body
 
         @media (max-width: 768px)
             border-right: 1px solid #000
-            
+
             &:last-child
                 border-right: 0px solid #000
 
@@ -964,7 +1014,7 @@ body
         color: #fff
         flex: 1 0 auto
 
-        transition: all 0.2s ease
+        transition: all 0.05s ease
 
         &:hover
             background: #4663cc
@@ -1049,6 +1099,9 @@ body
 
     &__image
         @include size (auto,60vh)
+
+        @media (max-width: 500px)
+            @include size (auto,50vh)
 
 .socials
     display: flex

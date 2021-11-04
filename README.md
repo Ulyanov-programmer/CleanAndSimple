@@ -1,7 +1,20 @@
 # Clean And Simple
-Clean And Simple - 
+Clean And Simple - the simple but well-made site.
 
 <!-- Ctrl + Shift + V => view this file in VS Code -->
+
+<details>
+<summary>View PC version</summary>
+  <img src="readmeFiles/preview.png" width=100% />
+</details>
+<details>
+<br>
+
+<summary>View Mobile version</summary>
+  <img src="readmeFiles/MOBpreview.png" width=100% />
+</details>
+<br>
+<br>
 
 <details>
  <summary>RU Как запустить?</summary>

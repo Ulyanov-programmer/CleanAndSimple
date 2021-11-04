@@ -214,5 +214,5 @@ If you have any questions or suggestions, write to me by email <a href="mailto:c
   You can always check the functionality of the collector by looking at the final project files.
 </details>
 
-[этот сайт на GitHub Pages]: //ulyanov-programmer.github.io/Project
-[this site on GitHub Pages]: //ulyanov-programmer.github.io/Project
+[этот сайт на GitHub Pages]: //ulyanov-programmer.github.io/CleanAndSimple/CleanAndSimple
+[this site on GitHub Pages]: //ulyanov-programmer.github.io/CleanAndSimple/CleanAndSimple

@@ -264,3 +264,60 @@ for (const postImgBlock of postImgBlocks) {
     postImgBlock.addEventListener('click', showImgFullscreen);
 }
 
+
+const fsSwiper = new Swiper('.fs-slider', {
+    autoplay: {
+        delay: 7000,
+        stopOnLastSlide: false,
+    },
+    pagination: {
+        el: '.fs-slider__pagination',
+        clickable: true,
+    },
+    watchOverflow: true,
+});
+
+const customersSwiper = new Swiper('.customers-quotes__slider', {
+    pagination: {
+        el: '.customers-quotes__pagination',
+    },
+
+    breakpoints: {
+        // when window width is >= 1270px
+        1270: {
+            slidesPerView: 1.5,
+            spaceBetween: 70,
+        },
+    },
+
+    autoHeight: true,
+    watchOverflow: true,
+});
+
+const blogSwiper = new Swiper('.blog__slider', {
+    autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+    },
+    navigation: {
+        nextEl: ".blog__slider-button-next",
+        prevEl: ".blog__slider-button-prev",
+    },
+    pagination: {
+        el: '.blog__slider-pagination',
+        clickable: true,
+    },
+
+    autoHeight: true,
+    watchOverflow: true,
+    spaceBetween: 50,
+
+
+    breakpoints: {
+        // when window width is >= 1270px
+        768: {
+            allowTouchMove: false,
+            autoplay: { delay: 999999999 },
+        },
+    },
+});

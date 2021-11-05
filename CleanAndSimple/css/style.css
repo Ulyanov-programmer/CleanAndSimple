@@ -926,6 +926,7 @@ body button {
 }
 
 .blog__slider-pagination {
+  z-index: 1 !important;
   bottom: 7% !important;
 }
 

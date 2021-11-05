@@ -156,20 +156,29 @@ function fontsStyle() {
         })
     }
 }
+function setupSwiperJs() {
+    const modules = [
+        'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/swiper/swiper-bundle.min.js.map',
+    ];
 
-// Call this task via terminal to convert .otf to .ttf => gulp otfTottf
-gulp.task('otfTottf', () => {
-    return gulp.src(`${sourceFolder}/fonts/*.otf`)
-        .pipe(fonter({
-            formats: ['ttf'],
-        }))
-        .pipe(dest(`${sourceFolder}/fonts/`));
-});
+    return gulp.src(modules)
+        .pipe(dest(paths.build.scripts));
+};
+function setupSwiperCss() {
+    const modules = [
+        'node_modules/swiper/swiper-bundle.min.css',
+    ];
 
+    return gulp.src(modules)
+        .pipe(dest(paths.build.css));
+};
 
-let build = gulp.series(clean, gulp.parallel(scripts, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, setupSwiperJs, setupSwiperCss, gulp.parallel(scripts, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFIles, browserSync);
 
+exports.setupSwiperCss = setupSwiperCss;
+exports.setupSwiperJs = setupSwiperJs;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;

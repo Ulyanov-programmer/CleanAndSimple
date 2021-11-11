@@ -17,6 +17,9 @@ body
     font-family: $mainFontFamily
     @include adaptive-property ('font-size',$mainFontSize,12)
 
+    @media (min-width: 1600px)
+      @include adaptive-property ('font-size',15,12)
+
     &.fixed
         overflow: hidden
 
@@ -109,7 +112,7 @@ body
     align-items: center
 
     @include size(auto, 100vh)
-    @include adaptive-property ('min-height',500, 500)
+    @include adaptive-property ('min-height',600, 600)
 
     &__body
         z-index: 1
@@ -184,7 +187,7 @@ body
     position: absolute
     z-index: 2
     *
-        z-index: 2
+      z-index: 2
 
     @include adaptive-property ('width', 15, 12)
     @include adaptive-property ('height', 15, 12)
@@ -304,6 +307,9 @@ body
         text-align: center
         @include adaptive-property ('padding-top',90,30)
         @include adaptive-property ('padding-bottom',90,30)
+        @media (min-width: 1600px)
+          @include adaptive-property ('padding-top',50,30)
+          @include adaptive-property ('padding-bottom',65,30)
 
     &__subtitle
         padding: 0px 0px 30px 0px
@@ -465,17 +471,20 @@ body
     text-align: center
 
     &__body
-        *
-            z-index: 1
-        @include adaptive-property ('padding-top',90,30)
-        @include adaptive-property ('padding-bottom',90,30)
+      *
+        z-index: 1
+      @include adaptive-property ('padding-top',90,30)
+      @include adaptive-property ('padding-bottom',90,30)
+      @media (min-width: 1600px)
+        @include adaptive-property ('padding-top',50,30)
+        @include adaptive-property ('padding-bottom',50,30)
 
     &__subtitle
-        margin: 0px 0px 30px 0px
+      margin: 0px 0px 30px 0px
 
     &__title
-        color: #3D4F9F
-        margin: 0px 0px 20px 0px
+      color: #3D4F9F
+      margin: 0px 0px 20px 0px
 
     &__benefits-block
         display: flex
@@ -646,7 +655,7 @@ body
                 object-fit: contain
 
         &.swiper-slide-active
-            transition: all 0.5s ease
+            transition: visibility, pointer-events 0.5s ease
             opacity: 100%
 
             .customers-quotes-slide__image
@@ -663,6 +672,9 @@ body
         text-align: center
         @include adaptive-property ('padding-top',60,20)
         @include adaptive-property ('padding-bottom',50,20)
+        @media (min-width: 1600px)
+          @include adaptive-property ('padding-top',40,30)
+          @include adaptive-property ('padding-bottom',40,30)
 
     &__subtitle
         margin: 0px 0px 20px 0px
@@ -723,21 +735,24 @@ body
     background: #F5F8FF
 
     @media (max-width: 1270px)
-        &:before
-            display: inline-block
-            content: ''
-            background: #f5f8ffec
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            z-index: 1
+      &:before
+        display: inline-block
+        content: ''
+        background: #f5f8ffec
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1
 
     &__body
         display: flex
-        @include adaptive-property ('padding-top',90,20)
-        @include adaptive-property ('padding-bottom',90,20)
+        @include adaptive-property ('padding-top',70,20)
+        @include adaptive-property ('padding-bottom',70,20)
+        @media (min-width: 1600px)
+          @include adaptive-property ('padding-top',40,30)
+          @include adaptive-property ('padding-bottom',40,30)
 
     &__text-block
         padding: 15px 15px 15px 15px
@@ -810,6 +825,8 @@ body
             top: 50%
             right: 55%
             transform: translate(50%, -50%)
+        @media (min-width: 1600px)
+            top: 60%
 
         img
             @include adaptive-property ('width', 550, 320)
@@ -1117,6 +1134,10 @@ body
 
             &:hover
                 color: #565d76
+                img
+                    transform: scale(1.4)
+
+            @media (min-width: 1600px)
                 img
                     transform: scale(1.4)
 

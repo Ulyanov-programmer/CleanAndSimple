@@ -267,7 +267,7 @@ for (const postImgBlock of postImgBlocks) {
 
 const fsSwiper = new Swiper('.fs-slider', {
     autoplay: {
-        delay: 7000,
+        delay: 5000,
         stopOnLastSlide: false,
     },
     pagination: {
@@ -275,6 +275,10 @@ const fsSwiper = new Swiper('.fs-slider', {
         clickable: true,
     },
     watchOverflow: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    }
 });
 
 const customersSwiper = new Swiper('.customers-quotes__slider', {
@@ -290,6 +294,7 @@ const customersSwiper = new Swiper('.customers-quotes__slider', {
         },
     },
 
+    loop: true,
     autoHeight: true,
     watchOverflow: true,
 });

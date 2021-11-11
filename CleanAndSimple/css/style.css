@@ -686,7 +686,7 @@ body button {
           align-items: center;
   width: auto;
   height: 100vh;
-  min-height: calc(500px + (500 - 500) * ((100vw - 320px) / (743 - 320)));
+  min-height: calc(600px + (600 - 600) * ((100vw - 320px) / (743 - 320)));
 }
 
 .fullscreen__body {
@@ -1279,9 +1279,9 @@ body button {
 }
 
 .customers-quotes-slide.swiper-slide-active {
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: visibility, pointer-events 0.5s ease;
+  -o-transition: visibility, pointer-events 0.5s ease;
+  transition: visibility, pointer-events 0.5s ease;
   opacity: 100%;
 }
 
@@ -1379,8 +1379,8 @@ body button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: calc(20px + (90 - 20) * ((100vw - 320px) / (743 - 320)));
-  padding-bottom: calc(20px + (90 - 20) * ((100vw - 320px) / (743 - 320)));
+  padding-top: calc(20px + (70 - 20) * ((100vw - 320px) / (743 - 320)));
+  padding-bottom: calc(20px + (70 - 20) * ((100vw - 320px) / (743 - 320)));
 }
 
 .plan-and-manage__text-block {
@@ -1881,6 +1881,42 @@ body button {
 @media (min-width: 1270px) {
   .post__images-block {
     padding: 0px 30px 0px 0px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (743 - 320)));
+  }
+
+  .blog__body {
+    padding-top: calc(30px + (50 - 30) * ((100vw - 320px) / (743 - 320)));
+    padding-bottom: calc(30px + (65 - 30) * ((100vw - 320px) / (743 - 320)));
+  }
+
+  .about-app__body {
+    padding-top: calc(30px + (50 - 30) * ((100vw - 320px) / (743 - 320)));
+    padding-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (743 - 320)));
+  }
+
+  .questions-answers__body {
+    padding-top: calc(30px + (40 - 30) * ((100vw - 320px) / (743 - 320)));
+    padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (743 - 320)));
+  }
+
+  .plan-and-manage__body {
+    padding-top: calc(30px + (40 - 30) * ((100vw - 320px) / (743 - 320)));
+    padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (743 - 320)));
+  }
+
+  .plan-and-manage__image {
+    top: 60%;
+  }
+
+  .socials__item a img {
+    -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+            transform: scale(1.4);
   }
 }
 
